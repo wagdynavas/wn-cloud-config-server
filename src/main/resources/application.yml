@@ -1,0 +1,4 @@
+spring:
+  cloud:
+    config:
+      uri: https://github.com/wagdynavas/wn-cloud-config-server.git
