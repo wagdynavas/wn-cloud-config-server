@@ -1,6 +1,16 @@
 spring:
+  profiles:
+    active: vault, git
   cloud:
     config:
-      uri: https://github.com/wagdynavas/wn-cloud-config-server.git
+      server:
+        git:
+          uri: https://github.com/wagdynavas/config-repo.git
+          searchPaths: licensingservice, organizationservice, userservice
+          order: 2
+        vault:
+          host: 127.0.0.1
+          port: 8200
+          order: 1
 server:
   port: 8888
